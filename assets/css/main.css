@@ -18,7 +18,7 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
-	margin: 0;
+	margin: -2;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -28,6 +28,23 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
+
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);  
+}
 
 body {
 	line-height: 1;
@@ -70,6 +87,17 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+.module h2 {
+	font-size: 1em;
+	container-name: sidebar
+}
+  
+  @container sidebar (min-width: 700px) {
+	.module h2 {
+		font-size: 2em;
+	}
 }
 
 /* Basic */
@@ -167,6 +195,34 @@ input, select, textarea {
 			border-bottom-color: transparent;
 		}
 
+		.wrapper {
+			height: 100vh;
+			/*This part is important for centering*/
+			display: grid;
+			place-items: center;
+		  }
+		  
+		  .typing-demo {
+			width: 8.55ch;
+			animation: typing 3s steps(65), blink 0.5s step-end infinite alternate;
+			white-space: nowrap;
+			overflow: hidden;
+			border-right: 3px solid;
+			font-family: Source Sans Pro;
+			font-size: 3em;
+		  }
+		  
+		  @keyframes typing {
+			from {
+			  width: 0
+			}
+		  }
+			  
+		  @keyframes blink {
+			50% {
+			  border-color: transparent
+			}
+		  }
 	strong, b {
 		font-weight: 600;
 	}
@@ -178,6 +234,7 @@ input, select, textarea {
 	p {
 		text-align: justify;
 		margin: 0 0 2rem 0;
+		
 	}
 
 	h1, h2, h3, h4, h5, h6 {
