@@ -1,135 +1,350 @@
-<!DOCTYPE HTML>
-<html>
-	<link rel="icon" type="image/png" href="Terablade.png">
-	<head>
-		<title>Terablade</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D LABS </title> 
+    <link rel="shortcut icon" type="image/jpg" href="LOGO.jpg"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #4CAF50;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button.reserved {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .home,
+        .about,
+        .equipment,
+        .reservation-form,
+        .summary,
+        .payment-form,
+        .thank-you,
+        .code-explanation {
+            display: none;
+        }
+    </style>
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-				<div id="intro">
-					<h1>Welcome to Terablade<br />
-					<h1><br />
-						<p>Your trusted partner in cybersecurity.
-
-Protecting your devices from malware, viruses, and cyber threats</p>
-					<ul class="actions">
-						<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-					</ul>
-				</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Terablade</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="news.html">LATEST NEWS</a></li>
-							<li><a href="about.html">About Us</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://twitter.com/Speedcuber515" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.instagram.com/speedcuber515/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://github.com/Sportscool1" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">January 1 2024</span>
-									<h2><a href="#">Protect Yourself from pessky hackers<br />
-									</a></h2>
-									<p><br />
-									Fixing todays tomorrow's,<br />
-									web blocking, harmful files protection, website protection, and PC hardware protection.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="mailto:albertphu3@gmail.com" class="button large">Contact Us</a></li>
-								</ul>
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">PC protectiom</span>
-										<h2><a href="#">protect your pc from hackers<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									Customize your very own custom secduled pc file run!.</p>
-									<ul class="actions special">
-										<li><a href="custompcbuild.html" class="button">Learn More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Web protection</span>
-										<h2><a href="#">Protect you from hackers even when being online!<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Professional website Protection servers, offering domain requests and website cheaks support.</p>
-									<ul class="actions special">
-										<li><a href="web.html" class="button">Learn More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">AI R&D</span>
-										<h2><a href="#">Powered by TERABLADE<br />
-										Research & Applications</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/Terablade.jpg" alt="" /></a>
-									<p>Chataptartifical intelligence department specializes in the development, research, and execution of AI workflows.
-									<ul class="actions special">
-										<li><a href="ai.html" class="button">Learn More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Programming</span>
-										<h2><a href="#">PROGRAMMER testing Platform</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>TERABLADE Programming testing platform allows you to temporarily rent a corporate certified AI/chatapt dedicated to your task.
-									<ul class="actions special">
-										<li><a href="rentaprogrammer.html" class="button">Learn More</a></li>
-									</ul>
-								</article>
-							</section>
-					</div>
-		</footer>
-
-	<!-- Copyright -->
-		<div id="copyright">
-			<ul><li>&copy; Terablade</li><li>Chatapt</li></ul>
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <header>
+        <h1>3D LABS Powered by Nexat AI</h1>
+        <img src="LOGO.jpg" alt="3D Labs">     
+    </header>
+    <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="#" onclick="showAbout()">About</a>
+        <a href="#" onclick="showCodeExplanation()">How Code Works</a>
+    </nav>
+    <main class="home" style="display: block;">
+        <h2>3D LABS Powered by Nexat AI</h2>
+        <p>Explore and create in our well-equipped makerspace. Reserve your space easily today! Just with a click of a button with the your choosen tool we graentee that we will have the right space reserved you!</p>
+        <p></p>
+        <a href="https://tsa-forms.vercel.app/">TSA FORMS</a>
+        <p></p>
+        <p></p>
+        <button onclick="showAvailableEquipment()">View Available Equipment</button>
+    </main>
+    <main class="about">
+        <h2>3D LABS Powered by Nexat AI</h2>
+        <p>Here at 3D LABS we welcome creativaty and imagination into our world</p>
+        <p>Contact Us : 3dLabs@gmail.com</p>
+        <p>social media:</p>
+        <p></p>
+        <a href="https://tsa-forms.vercel.app/">Tsa Forms</a>
+        <p></p>
+        <a href="">Join our Discord Comunity</a>
+        <p></p>
+        <a href="">Join our Twitter Comunity</a>
+        <p></p>
+         <a href="">Join our Instagram Comunity</a>
+        <p></p>
+        <a href="">Join our Youtube Comunity</a>
+        <p></p>
+        <p></p>
+        <button onclick="showHome()">Back to Home</button>
+    </main>
+    <main class="equipment">
+        <h2>Available Equipment</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Equipment</th>
+                    <th>Hourly Rate</th>
+                    <th>Reserve</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3D Printer</td>
+                     <img src="3D PRINTER.jpeg" alt="3D PRINTER"> 
+                    <td>$20</td>
+                    <td><button onclick="selectEquipment('3D Printer', 20)">Reserve</button></td>
+                </tr>
+                <tr>
+                    <td>Laser Cutter</td>
+                    <img src="LAZER.jpeg" alt="Laser cutter">                         
+                    <td>$25</td>
+                    <td><button onclick="selectEquipment('Lazer Cutter', 25)">Reserve</button></td>
+                </tr>
+                <tr>
+                    <td>3D printing pen</td>
+                     <img src="3D PEN.jpeg" alt="3D PEN"> 
+                    <td>$30</td>
+                    <td><button onclick="selectEquipment('3D printing pen', 30)">Reserve</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="backToHome()">Back to Home</button>
+    </main>
+    <main class="reservation-form">
+        <h2>Reservation Form</h2>
+        <form id="reservationForm">
+            <label for="userName">Your Name (FIRST AND LAST!):</label>
+            <input type="text" id="userName" required>
+            <label for="reservationDate">Date of Arrival:</label>
+            <input type="date" id="reservationDate" required>
+            <label for="reservationHours">Number of Hours:</label>
+            <input type="number" id="reservationHours" required disabled>
+            <button type="button" onclick="submitReservation()">Submit Reservation</button>
+        </form>
+        <button onclick="backToEquipment()">Back to Equipment</button>
+    </main>
+    <main class="summary">
+        <h2>Reservation Summary</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Equipment:</td>
+                    <td id="summaryEquipment"></td>
+                </tr>
+                <tr>
+                    <td>Hourly Rate:</td>
+                    <td id="summaryHourlyRate"></td>
+                </tr>
+                <tr>
+                    <td>User Name:</td>
+                    <td id="summaryUserName"></td>
+                </tr>
+                <tr>
+                    <td>Reservation Date:</td>
+                    <td id="summaryReservationDate"></td>
+                </tr>
+                <tr>
+                    <td>Total Cost:</td>
+                    <td id="summaryTotalCost"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="proceedToPayment()">Proceed to Payment</button>
+    </main>
+    <main class="payment-form">
+        <h2>Payment</h2>
+        <p>Enter your credit card information to complete the reservation.</p>
+        <label for="cardNumber">Credit Card Number:</label>
+        <input type="text" id="cardNumber" placeholder="Enter your card number" required>
+        <button type="button" onclick="backToSummary()">Back to Summary</button>
+        <button type="button" onclick="processPayment()">Process Payment</button>
+    </main>
+    <main class="thank-you">
+        <h2>Thank You for Your Reservation!</h2>
+        <p>Your reservation details:</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Equipment:</td>
+                    <td id="thankYouEquipment"></td>
+                </tr>
+                <tr>
+                    <td>Hourly Rate:</td>
+                    <td id="thankYouHourlyRate"></td>
+                </tr>
+                <tr>
+                    <td>User Name:</td>
+                    <td id="thankYouUserName"></td>
+                </tr>
+                <tr>
+                    <td>Reservation Date:</td>
+                    <td id="thankYouReservationDate"></td>
+                </tr>
+                <tr>
+                    <td>Total Cost:</td>
+                    <td id="thankYouTotalCost"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>We look forward to seeing your creative projects!</p>
+        <button type="button" onclick="continueToHome()">Continue</button>
+    </main>
+    <main class="code-explanation">
+        <h2>How Our Website Code Works</h2>
+        <p>The website is built using HTML, CSS, and JavaScript. The navigation is handled by JavaScript functions that show and hide different sections of the page based on user interactions. The reservation process involves selecting equipment, providing user details, reviewing the reservation, entering payment information, and receiving a thank-you message. The code is designed to be user-friendly and responsive, providing a seamless experience for makerspace enthusiasts.</p>
+        <p></p>
+         <a href="https://github.com/Sportscool1/TSA-FORMS-1">TSA FORMS WEBSITE CODE</a>
+        <p></p>
+         <a href="https://github.com/Sportscool1/TSA-REAL-FINAL">MAIN HOME WEBSITE CODE</a>
+        <p></p>
+         <a href="https://vercel.com/">WHAT WE USED TO LAUNCH THIS WEBSITE</a>
+        <p></p>
+        <p></p>
+        <button onclick="showHome()">Back to Home</button>
+    </main>
+    <script>
+        let selectedEquipment = '';
+        function showHome() {
+            hideAllSections();
+            document.querySelector('.home').style.display = 'block';
+        }
+        function showAbout() {
+            hideAllSections();
+            document.querySelector('.about').style.display = 'block';
+        }
+        function showAvailableEquipment() {
+            hideAllSections();
+            document.querySelector('.equipment').style.display = 'block';
+        }
+        function showCodeExplanation() {
+            hideAllSections();
+            document.querySelector('.code-explanation').style.display = 'block';
+        }
+        function selectEquipment(equipmentName, hourlyRate) {
+            selectedEquipment = equipmentName;
+            // Enable the reservation hours input
+            document.getElementById("reservationHours").removeAttribute("disabled");
+            // Set hourly rate in the form
+            document.getElementById("reservationHours").setAttribute("data-hourly-rate", hourlyRate);
+            // Display the reservation form
+            document.getElementById("reservationForm").reset(); // Clear the form
+            document.querySelector('.equipment').style.display = "none";
+            document.querySelector('.reservation-form').style.display = "block";
+        }
+        function backToHome() {
+            hideAllSections();
+            document.querySelector('.home').style.display = 'block';
+        }
+        function backToEquipment() {
+            hideAllSections();
+            document.querySelector('.equipment').style.display = 'block';
+        }
+        function backToSummary() {
+            hideAllSections();
+            document.querySelector('.summary').style.display = "block";
+        }
+        function submitReservation() {
+            // Handle the reservation details
+            const userName = document.getElementById('userName').value;
+            const reservationDate = document.getElementById('reservationDate').value;
+            const reservationHours = parseInt(document.getElementById('reservationHours').value, 10);
+            const hourlyRate = parseInt(document.getElementById('reservationHours').getAttribute('data-hourly-rate'), 10);
+            // Display the summary
+            document.getElementById("summaryEquipment").innerText = selectedEquipment;
+            document.getElementById("summaryHourlyRate").innerText = `$${hourlyRate}`;
+            document.getElementById("summaryUserName").innerText = userName;
+            document.getElementById("summaryReservationDate").innerText = reservationDate;
+            document.getElementById("summaryTotalCost").innerText = `$${calculateTotalCost(hourlyRate, reservationHours)}`;
+            hideAllSections();
+            document.querySelector('.summary').style.display = "block";
+        }
+        function proceedToPayment() {
+            hideAllSections();
+            document.querySelector('.payment-form').style.display = "block";
+        }
+        function processPayment() {
+            const cardNumber = document.getElementById('cardNumber').value;
+            // Simulate payment processing (replace with actual payment processing code)
+            if (cardNumber) {
+                // Display the detailed Thank You page
+                document.getElementById("thankYouEquipment").innerText = selectedEquipment;
+                document.getElementById("thankYouHourlyRate").innerText = `$${document.getElementById('summaryHourlyRate').innerText}`;
+                document.getElementById("thankYouUserName").innerText = document.getElementById('summaryUserName').innerText;
+                document.getElementById("thankYouReservationDate").innerText = document.getElementById('summaryReservationDate').innerText;
+                document.getElementById("thankYouTotalCost").innerText = `$${document.getElementById('summaryTotalCost').innerText}`;
+                hideAllSections();
+                document.querySelector('.thank-you').style.display = "block";
+            } else {
+                alert("Please enter a valid credit card number.");
+            }
+        }
+        function continueToHome() {
+            hideAllSections();
+            document.querySelector('.home').style.display = 'block';
+        }
+        function hideAllSections() {
+            const sections = document.querySelectorAll('main');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+        function calculateTotalCost(hourlyRate, reservationHours) {
+            return hourlyRate * reservationHours;
+        }
+    </script>
+</body>
 </html>
