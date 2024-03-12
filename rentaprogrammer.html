@@ -2,7 +2,7 @@
 <html>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<head>
-		<title>Terablade</title>
+		<title>Makerspace Reservation</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -15,7 +15,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Terablade</a>
+						<a href="index.html" class="logo">Makerspace Reservation</a>
 					</header>
 
 				<!-- Main -->
@@ -24,29 +24,59 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<span class="date">Jan 1, 2023</span>
-									<h1>Our team<br /></h1>
-									<p>We have a large team of over 10,000 workers world wide!.</p>
+									<span class="date">March 12, 2024</span>
+									<h1>Reserve Your Makerspace</h1>
+									<p>Welcome to our interactive makerspace reservation platform!</p>
 								</header>
-								<div class="image main"><img src="images/pic05.jpg" alt="" /></div>
-								<p>Terablade is now bringing the option to Ask a programmer about our code. The Ask-a-Programmer platform includes fees charged by the hour, and free support for setup and maintenance.</p>
+								<div class="image main"><img src="images/makerspace.jpg" alt="Makerspace" /></div>
+								<p>Book your time at our makerspace to unleash your creativity. Whether you're into woodworking, electronics, or 3D printing, we have the tools and space for you.</p>
 								<ul>
-									<li>Programmer - $50/hour</li>
-									<li>HTML, CSS, JS Questions - $1.99 an hour</li>
-									<li>Python, C++, C#, R, SQL, etc- $2.99  an hour</li>
-									<li>Server stats and Support - FREE (tech support if your project requires some form of online server)</li>
+									<li>Woodworking Station - $15/hour</li>
+									<li>Electronics Lab - $20/hour</li>
+									<li>3D Printing - $10/hour</li>
+									<li>Private Project Room - $25/hour</li>
 								</ul>
-								<p>Shedule a free consultation with a representative at today! Terablade we will quickly assign an available programmer for your Qustion, and you'll be getting your Questions responed soon.</p>
-								<ul class="actions special">
-									<li><a href="mailto:albertphu3@gmail.com.com?subject=Terablade%20Rent-a-Programmer%20%5BDO%20NOT%20CHANGE%20TITLE%5D&body=Name%3A%0AProject%20Name%3A%0APhone(optional)%3A%0AProgramming%20Language(s)%20-%20%5Bleave%20blank%20if%20you%20don't%20know%5D%3A%0APreferred%20Contact%20Method%3A" class="button large">Shedule a free consultation</a></li>
-								</ul>
+								<p>Fill out the form below to reserve your spot. We'll confirm your reservation via email.</p>
+								<form method="post" action="reservation.php">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" required />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" name="email" id="email" required />
+										</div>
+										<div class="field">
+											<label for="date">Date</label>
+											<input type="date" name="date" id="date" required />
+										</div>
+										<div class="field">
+											<label for="time">Time</label>
+											<input type="time" name="time" id="time" required />
+										</div>
+										<div class="field">
+											<label for="station">Select Station</label>
+											<select name="station" id="station" required>
+												<option value="">- Select -</option>
+												<option value="woodworking">Woodworking Station</option>
+												<option value="electronics">Electronics Lab</option>
+												<option value="3dprinting">3D Printing</option>
+												<option value="projectroom">Private Project Room</option>
+											</select>
+										</div>
+									</div>
+									<ul class="actions special">
+										<li><input type="submit" value="Reserve Now" class="button large" /></li>
+									</ul>
+								</form>
 							</section>
 
 					</div>
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Terablade</li><li>Powered by Chatapt</li></ul>
+						<ul><li>&copy; Makerspace Reservation</li><li>Powered by Chatapt</li></ul>
 					</div>
 
 			</div>
