@@ -11,92 +11,98 @@
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-		<div id="wrapper">
+			<div id="wrapper">
 
-			<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="logo">Makerspace Reservation</a>
-			</header>
-
-			<!-- Main -->
-			<div id="main">
-
-				<!-- Post -->
-				<section class="post">
-					<header class="major">
-						<span class="date">March 12, 2024</span>
-						<h1>Reserve Your Makerspace</h1>
-						<p>Welcome to our interactive makerspace reservation platform!</p>
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Makerspace Reservation</a>
 					</header>
-					<div class="image main"><img src="images/makerspace.jpg" alt="Makerspace" /></div>
-					<p>Book your time at our makerspace to unleash your creativity. Whether you're into woodworking, electronics, or 3D printing, we have the tools and space for you.</p>
-					<ul>
-						<li>Woodworking Station - $15/hour</li>
-						<li>Electronics Lab - $20/hour</li>
-						<li>3D Printing - $10/hour</li>
-						<li>Private Project Room - $25/hour</li>
-					</ul>
-					<p>Fill out the form below to reserve your spot. We'll confirm your reservation via email.</p>
-					<form method="post" action="reservation.php">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" required />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" required />
-							</div>
-							<div class="field">
-								<label for="credit_card">Credit Card Number</label>
-								<input type="text" name="credit_card" id="credit_card" required />
-							</div>
-							<div class="field">
-								<label for="room_number">Room Number</label>
-								<input type="text" name="room_number" id="room_number" required />
-							</div>
-							<div class="field">
-								<label for="date">Date</label>
-								<input type="date" name="date" id="date" required />
-							</div>
-							<div class="field">
-								<label for="time">Time</label>
-								<input type="time" name="time" id="time" required />
-							</div>
-							<div class="field">
-								<label for="station">Select Station</label>
-								<select name="station" id="station" required>
-									<option value="">- Select -</option>
-									<option value="woodworking">Woodworking Station</option>
-									<option value="electronics">Electronics Lab</option>
-									<option value="3dprinting">3D Printing</option>
-									<option value="projectroom">Private Project Room</option>
-								</select>
-							</div>
-						</div>
-						<ul class="actions special">
-							<li><input type="submit" value="Reserve Now" class="button large" /></li>
-						</ul>
-					</form>
-				</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">March 12, 2024</span>
+									<h1>Reserve Your Makerspace</h1>
+									<p>Welcome to our interactive makerspace reservation platform!</p>
+								</header>
+								<div class="image main"><img src="images/makerspace.jpg" alt="Makerspace" /></div>
+								<p>Book your time at our makerspace to unleash your creativity. Whether you're into woodworking, electronics, or 3D printing, we have the tools and space for you.</p>
+								<ul>
+									<li>Woodworking Station - $15/hour</li>
+									<li>Electronics Lab - $20/hour</li>
+									<li>3D Printing - $10/hour</li>
+									<li>Private Project Room - $25/hour</li>
+								</ul>
+								<p>Fill out the form below to reserve your spot. We'll confirm your reservation via email.</p>
+								<form method="post" action="reservation.php">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" required />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" name="email" id="email" required />
+										</div>
+										<div class="field">
+											<label for="credit_card">Credit Card Number</label>
+											<input type="text" name="credit_card" id="credit_card" required />
+										</div>
+										<div class="field">
+											<label for="room_number">Room Number</label>
+											<select name="room_number" id="room_number" required>
+												<option value="">- Select -</option>
+												<option value="101">101</option>
+												<option value="102">102</option>
+												<option value="103">103</option>
+												<option value="104">104</option>
+											</select>
+										</div>
+										<div class="field">
+											<label for="date">Date</label>
+											<input type="date" name="date" id="date" required />
+										</div>
+										<div class="field">
+											<label for="time">Time</label>
+											<input type="time" name="time" id="time" required />
+										</div>
+										<div class="field">
+											<label for="station">Select Station</label>
+											<select name="station" id="station" required>
+												<option value="">- Select -</option>
+												<option value="woodworking">Woodworking Station</option>
+												<option value="electronics">Electronics Lab</option>
+												<option value="3dprinting">3D Printing</option>
+												<option value="projectroom">Private Project Room</option>
+											</select>
+										</div>
+									</div>
+									<ul class="actions special">
+										<li><input type="submit" value="Reserve Now" class="button large" /></li>
+									</ul>
+								</form>
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Makerspace Reservation</li><li>Powered by Chatapt</li></ul>
+					</div>
 
 			</div>
-
-			<!-- Copyright -->
-			<div id="copyright">
-				<ul><li>&copy; Makerspace Reservation</li><li>Powered by Chatapt</li></ul>
-			</div>
-
-		</div>
 
 		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
