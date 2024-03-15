@@ -37,7 +37,7 @@
 									<li>Private Project Room - $25/hour</li>
 								</ul>
 								<p>Fill out the form below to reserve your spot. We'll confirm your reservation via email.</p>
-								<form method="post" action="reservation.php">
+								<form id="reservationForm" method="post" action="reservation.php">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -81,9 +81,14 @@
 										</div>
 									</div>
 									<ul class="actions special">
-										<li><input type="submit" value="Reserve Now" class="button large" /></li>
+										<li><input type="submit" value="Reserve Now" class="button large" id="reserveButton" /></li>
 									</ul>
 								</form>
+								<div id="reservationSummary" style="display: none;">
+									<h2>Thank you for choosing 3D Printing Lab!</h2>
+									<p>Your reservation summary:</p>
+									<ul id="summaryList"></ul>
+								</div>
 							</section>
 
 					</div>
@@ -103,6 +108,33 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				$(document).ready(function() {
+					$('#reservationForm').submit(function(event) {
+						event.preventDefault(); // Prevent form submission
+						
+						// Show reservation summary
+						var name = $('#name').val();
+						var email = $('#email').val();
+						var roomNumber = $('#room_number').val();
+						var date = $('#date').val();
+						var time = $('#time').val();
+						var station = $('#station').val();
+						
+						$('#summaryList').empty();
+						$('#summaryList').append('<li>Name: ' + name + '</li>');
+						$('#summaryList').append('<li>Email: ' + email + '</li>');
+						$('#summaryList').append('<li>Room Number: ' + roomNumber + '</li>');
+						$('#summaryList').append('<li>Date: ' + date + '</li>');
+						$('#summaryList').append('<li>Time: ' + time + '</li>');
+						$('#summaryList').append('<li>Station: ' + station + '</li>');
+
+						$('#reservationForm').hide();
+						$('#reservationSummary').show();
+					});
+				});
+			</script>
 
 	</body>
 </html>
