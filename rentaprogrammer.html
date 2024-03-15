@@ -88,6 +88,7 @@
 									<h2>Thank you for choosing 3D Printing Lab!</h2>
 									<p>Your reservation summary:</p>
 									<ul id="summaryList"></ul>
+									<p id="totalCost"></p>
 								</div>
 							</section>
 
@@ -121,7 +122,30 @@
 						var date = $('#date').val();
 						var time = $('#time').val();
 						var station = $('#station').val();
-						
+						var duration = 1; // Default duration is 1 hour
+						var costPerHour = 0;
+
+						// Calculate cost based on the selected station
+						switch (station) {
+							case 'woodworking':
+								costPerHour = 15;
+								break;
+							case 'electronics':
+								costPerHour = 20;
+								break;
+							case '3dprinting':
+								costPerHour = 10;
+								break;
+							case 'projectroom':
+								costPerHour = 25;
+								break;
+							default:
+								break;
+						}
+
+						// Calculate total cost
+						var totalCost = duration * costPerHour;
+
 						$('#summaryList').empty();
 						$('#summaryList').append('<li>Name: ' + name + '</li>');
 						$('#summaryList').append('<li>Email: ' + email + '</li>');
@@ -129,6 +153,7 @@
 						$('#summaryList').append('<li>Date: ' + date + '</li>');
 						$('#summaryList').append('<li>Time: ' + time + '</li>');
 						$('#summaryList').append('<li>Station: ' + station + '</li>');
+						$('#totalCost').text('Total Cost: $' + totalCost.toFixed(2));
 
 						$('#reservationForm').hide();
 						$('#reservationSummary').show();
