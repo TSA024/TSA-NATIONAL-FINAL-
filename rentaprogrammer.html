@@ -66,8 +66,12 @@
 											<input type="date" name="date" id="date" required />
 										</div>
 										<div class="field">
-											<label for="time">Time</label>
-											<input type="time" name="time" id="time" required />
+											<label for="arrival_time">Time of Arrival</label>
+											<input type="time" name="arrival_time" id="arrival_time" required />
+										</div>
+										<div class="field">
+											<label for="stay_duration">Duration of Stay (hours)</label>
+											<input type="number" name="stay_duration" id="stay_duration" min="1" value="1" required />
 										</div>
 										<div class="field">
 											<label for="station">Select Station</label>
@@ -120,9 +124,9 @@
 						var email = $('#email').val();
 						var roomNumber = $('#room_number').val();
 						var date = $('#date').val();
-						var time = $('#time').val();
+						var arrivalTime = $('#arrival_time').val();
+						var stayDuration = parseInt($('#stay_duration').val());
 						var station = $('#station').val();
-						var duration = 1; // Default duration is 1 hour
 						var costPerHour = 0;
 
 						// Calculate cost based on the selected station
@@ -144,14 +148,15 @@
 						}
 
 						// Calculate total cost
-						var totalCost = duration * costPerHour;
+						var totalCost = stayDuration * costPerHour;
 
 						$('#summaryList').empty();
 						$('#summaryList').append('<li>Name: ' + name + '</li>');
 						$('#summaryList').append('<li>Email: ' + email + '</li>');
 						$('#summaryList').append('<li>Room Number: ' + roomNumber + '</li>');
 						$('#summaryList').append('<li>Date: ' + date + '</li>');
-						$('#summaryList').append('<li>Time: ' + time + '</li>');
+						$('#summaryList').append('<li>Time of Arrival: ' + arrivalTime + '</li>');
+						$('#summaryList').append('<li>Duration of Stay (hours): ' + stayDuration + '</li>');
 						$('#summaryList').append('<li>Station: ' + station + '</li>');
 						$('#totalCost').text('Total Cost: $' + totalCost.toFixed(2));
 
